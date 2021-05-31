@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    {% if alert %}
+        <div class="alert alert-primary" role="alert">
+          {{ alertMessage }}
+        </div>
+    {% endif %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Name</th>
+              <th scope="col">Shares</th>
+              <th scope="col">Price</th>
+              <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in portfolio %}
+                {% if row["TOTAL"] != 0 %}
+                    <tr>
+                        <th scope="row">{{ row["symbol"] }}</th>
+                        <td>{{ row["name"] }}</td>
+                        <td>{{ row["TOTAL"] }}</td>
+                        <td>${{ row["price"] }}</td>
+                        <td>${{ row["sum(total)"] }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            <tr>
+                <th scope="row">CASH</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>${{ cash }}</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>${{ endTotal }}</b></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

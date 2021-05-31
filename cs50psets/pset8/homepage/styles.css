@@ -1,0 +1,59 @@
+body
+{
+    background-color: #333399;
+    font-family: "Courier", monospace !important;
+}
+
+#header
+{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#logo
+{
+  float: left;
+  width: 5%;
+  height: auto;
+  margin-top: .25%;
+}
+
+.title
+{
+    font-size: 3vw;
+    text-align: left;
+    padding: 1vw 10vw 0vw 0vw;
+    color: #007bff;
+    float: left;
+}
+
+#nav-bar
+{
+    padding-top: 1.25vw;
+    font-size: 1vw;
+}
+
+.nav-link
+{
+    padding: .5vw 1vw 0vw 1vw;
+    font-size: 2vw;
+    line-height: 2vw;
+}
+
+.mySlides
+{
+    display: block;
+    margin-top: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+.w3-button
+{
+    color: white;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}

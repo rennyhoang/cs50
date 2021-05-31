@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Contact
+        </title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <script>
+          function emailAlert()
+          {
+            alert("Your email has been submitted!");
+          }
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <img id="logo" src="logo.png" alt="logo">
+            <h1 class="title">
+                rennt704
+            </h1>
+            <ul class="nav nav-pills nav-fill" id="nav-bar">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="personalHobbies.html">Personal Hobbies</a>
+              </li>
+              <li class="nav-item" style="padding-right:1vw;">
+                <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+              </li>
+            </ul>
+        </div>
+        <form style="padding-top: 6vw; margin-left: 2vw; margin-right: 50vw; color: white;">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address:</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="emailTextArea">Enter your message here:</label>
+            <textarea class="form-control" id="emailTextArea" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="emailAlert()">Submit</button>
+        </form>
+    </body>
+</html>

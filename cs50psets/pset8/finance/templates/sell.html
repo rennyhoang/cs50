@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <select class="form-control" name="symbol" placeholder="Symbol">
+              {% for row in symbols %}
+                  {% if row["sum(num)"] > 0 %}
+                      <option>{{ row["symbol"] }}</option>
+                  {% endif %}
+              {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="numOfStocks" placeholder="Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{% endblock %}
